@@ -1,0 +1,12 @@
+version: '3'
+services:
+  bot:
+    build: .
+    container_name: telegram-bot
+    restart: always
+    environment:
+      BOT_TOKEN: 6046757570:AAFLU6IeX_8JahlTXoDP93d5oHJs-g3zOJg
+      ip: localhost
+      DATABASE_URL: postgresql+psycopg2://mvsczgzbtgrogt:MIMA_USER@localhost:5432/kontrakt
+    volumes:
+      - ./data:/usr/src/app/data  # Agar fayllar saqlansin
